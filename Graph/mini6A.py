@@ -1,10 +1,5 @@
-#Removed the import numpy line as it was not being used in the code.
-#Fixed the syntax error on line 16 by removing the unnecessary round function call. The line now reads: gradient = grady / gradx.
-#Added a missing closing parenthesis on line 22 for the print statement.
-#Removed the exec statement on line 26, which was unnecessary.
-#Added a missing closing parenthesis on line 27 for the input statement.
-#Now the code checks if gradx is zero before calculating the gradient. If gradx is zero, it prints an error message stating that the gradient cannot be calculated.
-#CREDIT TO JOSHUA TAN SHAO JIE
+#Hey, if gradx is zero, then it's supposed to be undefined, due to the graph being a vertical line.
+#Exec statement is necessary, due to it if being an erorr then it would entirely skip re-asking if the user wants to continue.
 import random
 import time
 quit = False
@@ -21,20 +16,26 @@ while not quit:
   grady = y2 - y1
   if gradx != 0:  # Check if gradx is non-zero
     gradient = round(grady / gradx, 1)
-    gradans = float(input('What is the gradient of the graph, rounded to 1 decimal point? '))
-    time.sleep(5)
-    if gradient == gradans:
-      print('Congrats! You are correct!')
+  else:
+    gradient = 'undefined'
+  gradans = float(input('What is the gradient of the graph, rounded to 1 decimal point? '))
+  time.sleep(5)
+  if gradient == 'undefined':
+    if gradans.lower == gradient:
+      print ('Congrats! You are correct!')
     else:
-      print('Oops! You are wrong. The correct answer is ' + str(gradient) + '.')
+      print('Oops! You are wrong. The correct answer is undefined, as the x axis remains the same.')
+  elif gradient == gradans:
+    print('Congrats! You are correct!')
   else:
-    print('Oops! The gradient cannot be calculated due to a division by zero.')
- 
-  rerun = input('Do you want to continue? (y/n) ')
-  if rerun == 'n':
-    print('Alright. Have a good day!')
-    quit = True
-  elif rerun == 'y':
-    print('------------------')
-  else:
-    print('Error')
+    print('Oops! You are wrong. The correct answer is ' + str(gradient) + '.')
+  rerun_exec = '''rerun = input('Do you want to continue? (y/n) ')
+if rerun == 'n':
+  print('Alright. Have a good day!')
+  quit = True
+elif rerun == 'y':
+  print('------------------')
+else:
+  print('Error')
+  exec (rerun_exec)'''
+  exec (rerun_exec)
