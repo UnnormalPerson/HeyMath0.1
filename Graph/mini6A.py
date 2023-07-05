@@ -4,6 +4,7 @@
 #Removed the exec statement on line 26, which was unnecessary.
 #Added a missing closing parenthesis on line 27 for the input statement.
 #Now the code checks if gradx is zero before calculating the gradient. If gradx is zero, it prints an error message stating that the gradient cannot be calculated.
+#CREDIT TO JOSHUA TAN SHAO JIE
 import random
 import time
 quit = False
