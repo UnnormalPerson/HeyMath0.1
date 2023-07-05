@@ -39,8 +39,8 @@ def questiongen(question_number):
             solution = calculate_triangle_area(rheiaxyuwei1, rheiaxyuwei2)
         else:
             rheiaxyuwei1 = random.randint(1, 10)
-            question = f"Q{question_number}: Find the circumference of a circle with radius {rheiaxyuwei1} units"
-            solution = calculate_circle_circumference(rheiaxyuwei1)
+            question = f"Q{question_number}: Find the circumference of a circle with radius {rheiaxyuwei1} units, rounded to the nearest no."
+            solution = round(calculate_circle_circumference(rheiaxyuwei1))
     else:
         chengenxamanda1 = random.randint(1, 90)
         question = f"Q{question_number}: Find the sine of angle {chengenxamanda1} degrees"
