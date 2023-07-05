@@ -14,7 +14,7 @@ def calculate_rectangle_area(length, breadth):
 def calculate_triangle_area(base, height):
     return 0.5 * base * height
 def calculate_circle_circumference(radius):
-    return 2 * 3.14 * radius
+    return 2 * math.pi * radius
 def calculate_sine(angle):
     return math.sin(math.radians(angle))
 def questiongen(question_number):
@@ -39,11 +39,11 @@ def questiongen(question_number):
             solution = calculate_triangle_area(rheiaxyuwei1, rheiaxyuwei2)
         else:
             rheiaxyuwei1 = random.randint(1, 10)
-            question = f"Q{question_number}: Find the circumference of a circle with radius {rheiaxyuwei1} units (use π = 3.14)"
+            question = f"Q{question_number}: Find the circumference of a circle with radius {rheiaxyuwei1} units"
             solution = calculate_circle_circumference(rheiaxyuwei1)
     else:
         chengenxamanda1 = random.randint(1, 90)
-        question = f"Q{question_number}: Find the sine of angle {chengenxamanda1} degrees (use π = 3.14)"
+        question = f"Q{question_number}: Find the sine of angle {chengenxamanda1} degrees"
         solution = calculate_sine(chengenxamanda1)
     return question, solution
 def check_answer(question, user_answer, solution):
