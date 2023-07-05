@@ -14,7 +14,7 @@ def calculate_rectangle_area(length, breadth):
 def calculate_triangle_area(base, height):
     return 0.5 * base * height
 def calculate_circle_circumference(radius):
-    return 2 * math.pi * radius
+    return 2 * 3.14 * radius
 def calculate_sine(angle):
     return math.sin(math.radians(angle))
 def questiongen(question_number):
