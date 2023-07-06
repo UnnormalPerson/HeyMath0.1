@@ -10,7 +10,7 @@ def main():
         print("4. Calculate rate")
         print("5. Calculate time")
         print("6. Calculate total interest")
-
+        print("7. Quit")
         choice = input("Enter your choice (1-6): ")
 
         if choice == "1":
