@@ -9,7 +9,7 @@ def main():
         print("3. Calculate principle + interest")
         print("4. Calculate rate")
         print("5. Calculate time")
-        print("6. Calculate total interest")
+        print("6. Calculate total payable after interest")
         print("7. Quit")
         choice = input("Enter your choice (1-6): ")
 
@@ -48,7 +48,15 @@ def main():
             time = interest / (principle * rate / 100)
             print("The time (in years) is:", time)
         elif choice == "6":
-            #Total Interest
+            years = input('How many years of interest do you want to check (compound)')
+            interest = float(input('What is the interest? (In percentage)')
+            principle = float(input('What is the principle?')
+            years = years - 1
+            deci_interest = interest / 100
+            payable = principle
+            for i in years:
+                payable = payable * deci_interest
+            print("The total payable is $", payable)
         elif choice == "7":
             print("Exiting the program...")
             break
