@@ -9,7 +9,7 @@ def main():
         print("3. Calculate principle + interest")
         print("4. Calculate rate")
         print("5. Calculate time")
-        print("6. Exit")
+        print("6. Calculate total interest")
 
         choice = input("Enter your choice (1-6): ")
 
@@ -48,10 +48,12 @@ def main():
             time = interest / (principle * rate / 100)
             print("The time (in years) is:", time)
         elif choice == "6":
+            #Total Interest
+        elif choice == "7":
             print("Exiting the program...")
             break
         else:
-            print("Invalid choice! Please enter a number from 1 to 6.")
+            print("Invalid choice! Please enter a number from 1 to 7.")
         print()  # Print a blank line for readability
 if __name__ == "__main__":
     main()
